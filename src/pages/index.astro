@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Roger Ivens.">
+	<main>
+		<h1 class="text-8xl text-center leading-[1] font-size text-gradient mb-0">
+			Roger Ivens
+		</h1>
+		<p class="text-6xl text-center mb-6 text-gray-300">Actor</p>
+		<div class="m-auto text-center leading-loose mt-4 flex flex-row flex-wrap gap-6 gap-y-2 m-auto flex-center justify-center mb-6">
+			<p><a class="text-xl text-center text-gray-400 leading-[1] my-0" href="https://resumes.actorsaccess.com/rogerivens" target="_blank">ActorsAccess.com</a></p>
+			<p><a class="text-xl text-center text-gray-400 leading-[1] my-0" href="https://www.spotlight.com/7613-0165-6467" target="_blank">Spotlight.com</a></p>
+			<p><a class="text-xl text-center text-gray-400 leading-[1] my-0" href="https://www.imdb.com/name/nm10876025/" target="_blank">IMDb.com</a></p>
+		</div>
+		<img src="src/assets/roger_03.png" class="bg-slate-500 w-[90%] m-auto rounded-[20px]" alt="Roger Ivens - Actor">
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #21274a, #9e9bb8, #9e9bb8 );
+	}
+
+	h1 {
+		margin: 2rem 0;
+	}
+
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+		50% {
+			background-position-y: 80%;
+		}
+	}
+</style>
