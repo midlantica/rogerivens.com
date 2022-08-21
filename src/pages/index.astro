@@ -1,44 +1,66 @@
 ---
+title: 'Test';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Welcome to Roger Ivens.">
-	<main>
-		<h1 class="text-8xl text-center leading-[1.4] font-size text-gradient mb-0">
-			Roger Ivens
-		</h1>
-		<p class="text-white">Roger Ivens is your rising star In the action genre, known as the
-			'Helicopter Sniper' in Stranger Things S4 EP8, with recent supporting
-			roles in Lonesome Soldier, VR and as SWAT commander in Sacrifice,
-			and currently working on blockbusters with release dates in the
-			Summer and Fall of 2023.
-			A killer in film, a lover of life with an international background, while
-			standing at 6'2", 220lbs, with stunt, actual combat and acting training
-			galore, makes Roger Ivens a presence to be reckoned with as your door
-			kicker in film.</p>
-		<p class="text-6xl text-center mb-6 text-gray-300">Actor</p>
-		<div class="m-auto text-center leading-loose mt-4 flex flex-row flex-wrap gap-6 gap-y-2 m-auto flex-center justify-center mb-6">
-			<p><a class="text-xl text-center text-gray-400 leading-[1] my-0" href="https://resumes.actorsaccess.com/rogerivens" target="_blank">ActorsAccess.com</a></p>
-			<p><a class="text-xl text-center text-gray-400 leading-[1] my-0" href="https://www.spotlight.com/7613-0165-6467" target="_blank">Spotlight.com</a></p>
-			<p><a class="text-xl text-center text-gray-400 leading-[1] my-0" href="https://www.imdb.com/name/nm10876025/" target="_blank">IMDb.com</a></p>
-		</div>
-		<img src="roger_03.png" class="bg-slate-500 w-[90%] m-auto rounded-[20px]" alt="Roger Ivens - Actor">
+<Layout title="Roger Ivens - Actor">
+	<div id="red-bar" class="bg-red-700 mix-blend-overlay w-full h-[5.4rem] z-10 absolute top-0"></div>
+	<main class="relative z-20 flex md:flex-row flex-col flex-wrap gap-4 py-8 px-10 justify-center h-full">
+		<section id="hero-pic" class="flex-1 mx-auto sm:order-first">
+			<img class="aspect-auto sm:w-full sm:m-x-auto w-full rounded-lg md:rounded-br-[60px]" src="/roger-pic.png" alt="">
+		</section>
+		<section id="hero-pic" class="w-full md:w-[62%]">
+			<div class="flex flex-row flex-wrap gap-x-8 w-full justify-center">
+				<img class="flex-initial" src="./roger-head.svg" alt="Roger">
+				<img class="flex-initial" src="./ivens-head.svg" alt="Ivens">
+			</div>
+			<section id="contact" class="mb-2">
+				<h3 class="text-xl text-center text-shadow leading-[1.3] my-0">
+					Agency: Phirgun Mair
+				</h3>
+				<h5 class="text-xl text-center text-shadow leading-[1.3] my-0">Agent: Peter Yanke,
+					<a href="tel:8183767602" class="hover:border-b-2">818-376-7602</a>,
+					<a href="mailto:pyanke@gmail.com" class="hover:border-b-2">pyanke@gmail.com</a>
+				</h5>
+			</section>
+			<section id="links" class="text-center flex flex-row flex-wrap gap-x-4 flex-center justify-center mt-0 mb-3">
+				<a class="h-[36px] w-[36px]" href="https://www.instagram.com/rogerivens_actor/" target="_blank">
+					<img class="hover:drop-shadow-[2px_2px_2px_rgba(0,0,0,.5)]" src="/instagram_logo.svg" alt="Instagram">
+				</a>
+				<button class="rounded-md bg-red-800 mix-blend-overlay hover:bg-red-900 hover:drop-shadow-[2px_2px_2px_rgba(0,0,0,.5)] px-5 py-1 mb-2">
+					<a class="text-center text-white leading-[1] my-0" href="https://resumes.actorsaccess.com/rogerivens" target="_blank">ActorsAccess.com</a>
+				</button>
+				<button class="rounded-md bg-red-800 mix-blend-overlay hover:bg-red-900 hover:drop-shadow-[2px_2px_2px_rgba(0,0,0,.5)] px-5 py-1 mb-2"><a class="text-center text-white leading-[1] my-0" href="https://www.spotlight.com/7613-0165-6467" target="_blank">Spotlight.com</a></button>
+				<button class="rounded-md bg-red-800 mix-blend-overlay hover:bg-red-900 hover:drop-shadow-[2px_2px_2px_rgba(0,0,0,.5)] px-5 py-1 mb-2"><a class="text-center text-white leading-[1] my-0" href="https://www.imdb.com/name/nm10876025/" target="_blank">IMDb.com</a></button>
+			</section>
+			<section id="content" class="flex flex-col md:flex-row flex-wrap gap-4">
+				<aside id="bio" class="shrink bg-black/40 p-6 rounded-br-[30px] md:w-[30%] h-fit min-w-[195px]">
+					<img src="/bio.svg" alt="bio" class="mb-4 ">
+					<div class="flex flex-row flex-wrap gap-x-6">
+						<p class="text-shadow">Hair: Brown</p>
+						<p class="text-shadow">Eyes: Brown</p>
+						<p class="text-shadow">Height: 6&prime;2&Prime;</p>
+						<p class="text-shadow">Weight: 220lb</p>
+						<p class="text-shadow">Chest: 42&Prime;</p>
+						<p class="text-shadow">Waist: 32&Prime;</p>
+						<p class="text-shadow">Shoe: 12</p>
+					</div>
+				</aside>
+				<article class="flex-1 bg-black/40 p-6 rounded-br-[60px] w-full md:w-[70%]">
+					<p class="text-white text-shadow"><img class="float-left h-[2.65rem]" src="/cap-R.svg">oger Ivens is a rising star in the action genre, known as the 'Helicopter Sniper' in <span class="bg-red-600">Stranger Things</span> S4 EP8, with recent supporting roles in Lonesome Soldier, VR and as SWAT commander in Sacrifice, and currently working on blockbusters with release dates in the Summer and Fall of 2023.
+						<br>
+						A killer in film, a lover of life with an international background, while standing at 6'2", 220lbs, with stunt, <span class="bg-red-600">actual combat</span> and acting training galore, makes Roger Ivens a presence to be reckoned with as your door kicker in film.
+					</p>
+				</article>
+			</section>
+		</section>
 	</main>
+	<div id="red-bar" class="bg-red-700 mix-blend-overlay w-full h-20 z-10 fixed bottom-0"></div>
 </Layout>
 
 <style>
 	:root {
 		--astro-gradient: linear-gradient(0deg, #21274a, #9e9bb8, #9e9bb8 );
-	}
-
-	h1 {
-		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
 	}
 
 	.text-gradient {
