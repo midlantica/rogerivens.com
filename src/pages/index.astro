@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
 	<div id="red-bar" class="bg-red-700 mix-blend-overlay w-full h-[5.4rem] z-10 absolute top-0"></div>
 	<main class="relative z-20 flex md:flex-row flex-col flex-wrap gap-4 py-8 px-10 justify-center h-full">
 		<section id="hero-pic" class="flex-1 mx-auto sm:order-first">
-			<img class="aspect-auto sm:w-full sm:m-x-auto w-full rounded-lg md:rounded-br-[60px]" src="/roger-pic.png" alt="">
+			<img class="aspect-auto sm:w-full sm:m-x-auto w-full rounded-lg md:rounded-br-[60px]" src="/roger-pic.jpg" alt="">
 		</section>
 		<section id="hero-pic" class="w-full md:w-[62%]">
 			<div class="flex flex-row flex-wrap gap-x-8 w-full justify-center">
@@ -58,28 +58,5 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #21274a, #9e9bb8, #9e9bb8 );
-	}
 
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
 </style>
