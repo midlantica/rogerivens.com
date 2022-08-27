@@ -34,13 +34,14 @@ const { title } = Astro.props as Props;
 		<meta name="theme-color" content="#FF1515">
 
 	</head>
-	<body class="m-0 p-0 relative">
+	<body class="m-0 p-0 relative w-screen h-screen overflow-auto ">
 		<slot />
 	</body>
 </html>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 	:root {
 		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
@@ -57,7 +58,7 @@ const { title } = Astro.props as Props;
 	}
 
 	body {
-		@apply bg-[url('/home-base.jpg')] bg-center bg-repeat;
+		@apply bg-[url('/home-base.jpg')] bg-cover;
 	}
 
 	:global(h1) {

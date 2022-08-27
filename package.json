@@ -12,6 +12,13 @@
   "devDependencies": {
     "@astrojs/mdx": "^0.10.0",
     "@astrojs/tailwind": "^1.0.0",
-    "astro": "^1.0.6"
+    "@astrojs/vue": "^1.0.0",
+    "astro": "^1.0.6",
+    "vue": "^3.2.37"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.8",
+    "cssnano": "^5.1.13",
+    "vueperslides": "^3.4.2"
   }
 }
