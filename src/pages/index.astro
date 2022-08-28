@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import slides from '../components/slides.vue';
+import Slides from '../components/slides.vue';
 
 ---
 
@@ -16,10 +16,12 @@ import slides from '../components/slides.vue';
 				<!-- SLIDE SHOW HERE -->
 				<!-- SLIDE SHOW HERE -->
 				<!-- SLIDE SHOW HERE -->
-				<img class="aspect-auto max-h-[90vh] rounded-lg md:rounded-br-[60px] m-auto"
+				<Slides client:load />
+				<!-- <img class="aspect-auto max-h-[90vh] rounded-lg md:rounded-br-[60px] m-auto"
 					src="/roger-pic.jpg"
 					alt="Roger Ivens in Stranger S4 EP8"
-				>
+				> -->
+
 			</section>
 			<section id="content-area" class="w-full">
 				<div class="flex flex-row flex-wrap gap-x-8 w-full justify-center">
