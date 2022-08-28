@@ -1,14 +1,16 @@
 <template>
   <vueper-slides
     fade
-    :infinite="false"
-    :bullets="false"
+    :infinite="true"
+    :bullets="true"
     :slide-ratio="16 / 10"
     autoplay
-    fractions
-    progress
   >
-    <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image">
+    <vueper-slide v-for="(slide, i) in slides"
+      :key="i"
+      :image="slide.image"
+      class="aspect-auto max-h-[90vh] rounded-lg md:rounded-br-[60px] m-auto self-end"
+    >
       <template v-slot:loader>
         <i class="icon icon-loader spinning"></i>
         <span>Loading...</span>
@@ -21,23 +23,28 @@
   // import { ref } from "vue";
   import "../../node_modules/vueperslides/dist/vueperslides.css";
   import { VueperSlides, VueperSlide } from "vueperslides";
-  // import vueperslides from 'vueperslides';
-  // const { VueperSlides, VueperSlide } = vueperslides;
 
   // let title = ref('')
-  // const imgPath = ('/public/img/portfolio/01_uiux/')
   let slides = [
     {
-      image: "/roger-pic.jpg",
+      title: "Roger Ivens in Stranger Things",
+      image: "/roger-pic-01.jpg",
     },
     {
-      image: "/roger-pic_02.jpg",
+      title: "Roger Ivens",
+      image: "/roger-pic-02.jpg",
     },
     {
-      image: "/roger-pic_03.jpg",
+      title: "Roger Ivens",
+      image: "/roger-pic-03.jpg",
     },
     {
-      image: "/roger-pic_04.jpg",
+      title: "Roger Ivens",
+      image: "/roger-pic-04.jpg",
+    },
+    {
+      title: "Roger Ivens",
+      image: "/roger-pic-05.jpg",
     },
   ]
 </script>
@@ -73,7 +80,7 @@
     // vertical-align: middle;
     // stroke: currentColor;
     // fill: none;
-    width: 3em;
+    width: 2em;
     // padding: 1em;
     // -webkit-box-sizing: border-box;
     // box-sizing: border-box;
@@ -108,10 +115,10 @@
 
   .vueperslides__fractions {
     position: absolute;
-    top: initial;
-    left: initial;
-    bottom: $mortar !important;
-    right: $mortar !important;
+    bottom: 2.7rem !important;
+    right: 2rem !important;
+    top: initial !important;
+    left: initial !important;
     z-index: 2;
     padding: 0.15em 0.5em;
     border: 1px solid hsl(0deg 0% 100% / 27%);
@@ -166,4 +173,17 @@
     }
   }
 
+  .vueperslide__content-wrapper:not(.vueperslide__content-wrapper--outside-top):not(.vueperslide__content-wrapper--outside-bottom) {
+      align-items: center  !important;
+      display: flex  !important;
+      flex: 1 1 auto  !important;
+      /* flex-direction: column; */
+      /* justify-content: center; */
+      text-align: center  !important;
+  }
+  .vueperslide__content-wrapper:not(.vueperslide__content-wrapper--outside-top):not(.vueperslide__content-wrapper--outside-bottom) {
+      height: 10% !important;
+      margin: 0rem 0 0 1rem !important;
+      /* left: 0; */
+  }
 </style>
