@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Slides from '../components/slides.vue';
-
+// import Slides from '../components/slides.vue';
 ---
 
 <Layout title="Roger Ivens - Actor">
@@ -9,18 +8,18 @@ import Slides from '../components/slides.vue';
 	<div id="red-bar" class="bg-gradient-to-b from-red-900 to-red-900/0 mix-blend-overlay w-full h-[5.4rem] z-10 absolute top-0 left-0"></div>
 
 	<!-- CONTENT -->
-	<div class="w-screen h-screen relative z-20">
-		<main class="w-screen h-screen grid lg:grid-flow-col grid-flow-row gap-4 p-6 justify-center overflow-auto lg:w-[100%] m-auto">
-			<section id="hero-pic-area" class="min-w-[400px] mx-auto mb-auto">
+	<div class="w-screen h-screen relative z-20 overflow-auto pb-6">
+		<main class="max-w-screen-xl h-screen grid lg:grid-flow-col grid-flow-row gap-4 p-6 justify-center lg:w-[100%] m-auto pb-6">
+			<section id="hero-pic-area" class="mx-auto mb-auto">
 
 				<!-- SLIDE SHOW HERE -->
 				<!-- SLIDE SHOW HERE -->
 				<!-- SLIDE SHOW HERE -->
-				<Slides client:load />
-				<!-- <img class="aspect-auto max-h-[90vh] rounded-lg md:rounded-br-[60px] m-auto"
+				<!-- <Slides client:load /> -->
+				<img class="aspect-auto max-h-[90vh] rounded-lg md:rounded-br-[60px] m-auto"
 					src="/roger-pic.jpg"
 					alt="Roger Ivens in Stranger S4 EP8"
-				> -->
+				>
 
 			</section>
 			<section id="content-area" class="">

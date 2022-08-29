@@ -1,31 +1,23 @@
-<template>
-  <vueper-slides
-    fade
-    :infinite="true"
-    :bullets="true"
-    :slide-ratio="16 / 10"
-    autoplay
-  >
-    <vueper-slide v-for="(slide, i) in slides"
-      :key="i"
-      :image="slide.image"
-      class="aspect-auto max-h-[90vh] rounded-lg md:rounded-br-[60px] m-auto self-end"
-    >
-      <template v-slot:loader>
-        <i class="icon icon-loader spinning"></i>
-        <span>Loading...</span>
-      </template>
-    </vueper-slide>
-  </vueper-slides>
-</template>
-
 <script setup>
   // import { ref } from "vue";
   import "../../node_modules/vueperslides/dist/vueperslides.css";
   import { VueperSlides, VueperSlide } from "vueperslides";
 
   // let title = ref('')
+
+  let slide = ""
+
   let slides = [
+    // {
+    //   title: "Stranger Things Shooter clip",
+    //   // image: "/roger-pic-01.jpg",
+    //   video: {
+    //     url: "https://www.youtube.com/watch?v=CROD3BxXS9Y&t=44s",
+    //     props: {
+    //       allow: "autoplay"
+    //     }
+    //   }
+    // },
     {
       title: "Roger Ivens in Stranger Things",
       image: "/roger-pic-01.jpg",
@@ -47,7 +39,31 @@
       image: "/roger-pic-05.jpg",
     },
   ]
+
 </script>
+
+
+<template>
+  <vueper-slides
+    fade
+    :infinite="true"
+    :bullets="true"
+    :slide-ratio="16 / 10"
+    autoplay
+    :video="slide.video"
+  >
+    <vueper-slide v-for="(slide, i) in slides"
+      :key="i"
+      :image="slide.image"
+      class="aspect-auto max-h-[90vh] rounded-lg md:rounded-br-[60px] m-auto self-end"
+    >
+      <template v-slot:loader>
+        <i class="icon icon-loader spinning"></i>
+        <span>Loading...</span>
+      </template>
+    </vueper-slide>
+  </vueper-slides>
+</template>
 
 <style lang="scss" scoped>
   $mortar: .25rem;
