@@ -1,67 +1,47 @@
 <script setup>
   // import { ref } from "vue";
-  import "../../node_modules/vueperslides/dist/vueperslides.css";
   import { VueperSlides, VueperSlide } from "vueperslides";
+  import "../../node_modules/vueperslides/dist/vueperslides.css";
 
-  // let title = ref('')
+  // import { Icon } from '@iconify/vue';
 
-  let slide = ""
-
-  let slides = [
-    // {
-    //   title: "Stranger Things Shooter clip",
-    //   // image: "/roger-pic-01.jpg",
-    //   video: {
-    //     url: "https://www.youtube.com/watch?v=CROD3BxXS9Y&t=44s",
-    //     props: {
-    //       allow: "autoplay"
-    //     }
-    //   }
-    // },
+  const slides = [
     {
-      title: "Roger Ivens in Stranger Things",
+      // title: 'Slide #1',
+      // content: 'Slide content.',
       image: "/roger-pic-01.jpg",
     },
     {
-      title: "Roger Ivens",
+      // title: 'Slide #2',
+      // content: 'Slide content.',
       image: "/roger-pic-02.jpg",
     },
     {
-      title: "Roger Ivens",
+      // title: 'Slide #3',
+      // content: 'Slide content.',
       image: "/roger-pic-03.jpg",
     },
-    {
-      title: "Roger Ivens",
-      image: "/roger-pic-04.jpg",
-    },
-    {
-      title: "Roger Ivens",
-      image: "/roger-pic-05.jpg",
-    },
-  ]
-
+  ];
 </script>
 
-
 <template>
-  <vueper-slides
-    fade
-    :infinite="true"
-    :bullets="true"
-    :slide-ratio="16 / 10"
-    autoplay
-    :video="slide.video"
-  >
-    <vueper-slide v-for="(slide, i) in slides"
+  <vueper-slides class="w-screen h-screen">
+    <template #arrow-left>
+      <Icon
+        icon="ic:round-navigate-next"
+        width="36"
+        height="36"
+        :horizontalFlip="true"
+      />
+    </template>
+
+    <vueper-slide
+      v-for="(slide, i) in slides"
       :key="i"
+      :title="slide.title"
       :image="slide.image"
-      class="aspect-auto max-h-[90vh] rounded-lg md:rounded-br-[60px] m-auto self-end"
-    >
-      <template v-slot:loader>
-        <i class="icon icon-loader spinning"></i>
-        <span>Loading...</span>
-      </template>
-    </vueper-slide>
+      :content="slide.content"
+    />
   </vueper-slides>
 </template>
 
