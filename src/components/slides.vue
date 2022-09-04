@@ -54,8 +54,6 @@
     :infinite="false"
     :bullets="false"
     autoplay
-    lazy
-    lazy-load-on-drag
     :fixed-height="true"
     :slide-ratio="1 / 2"
   >
