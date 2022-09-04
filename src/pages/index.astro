@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Slides from '../components/slides.vue';
+import Slides from '../components/slides3.vue';
 ---
 
 <Layout title="Roger Ivens - Actor">
@@ -9,13 +9,12 @@ import Slides from '../components/slides.vue';
 		<div class="grid w-full">
 
 			<div class="name flex flex-row flex-wrap gap-x-4 w-full justify-center">
-				<img class="block max-h-[3rem]" src="./roger-head.svg" alt="Roger">
-				<img class="block max-h-[3rem]" src="./ivens-head.svg" alt="Ivens">
+				<img class="block max-h-[8vh]" src="./roger-head.svg" alt="Roger">
+				<img class="block max-h-[8vh]" src="./ivens-head.svg" alt="Ivens">
 			</div>
 
-			<div class="slideshow w-full">
-				<!-- <h1>hello</h1> -->
-				<Slides client:load />
+			<div class="slideshow">
+				<Slides client:load class="z-20" />
 			</div>
 
 			<div class="contact">
@@ -41,7 +40,7 @@ import Slides from '../components/slides.vue';
 
 			<div class="content">
 				<article class="flex-1 bg-black/40 p-6 w-full rounded-2xl rounded-tl-none mb-4">
-					<p class="text-sm text-white text-shadow"><img class="float-left h-[2.65rem]" src="/cap-R.svg">oger Ivens is a rising star in the action genre, known as the 'Helicopter Sniper' in <span class="bg-red-600">Stranger&nbsp;Things</span> S4 EP8, with recent supporting roles in Lonesome Soldier, VR and as SWAT commander in Sacrifice, and currently working on blockbusters with release dates in the Summer and Fall of 2023.
+					<p class="text-sm text-white text-shadow"><img class="float-left h-[2.3rem] mr-1" src="/cap-R.svg">oger Ivens is a rising star in the action genre, known as the 'Helicopter Sniper' in <span class="bg-red-600">Stranger&nbsp;Things</span> S4 EP8, with recent supporting roles in Lonesome Soldier, VR and as SWAT commander in Sacrifice, and currently working on blockbusters with release dates in the Summer and Fall of 2023.
 						<br>
 						A killer in film, a lover of life with an international background, while standing at 6'2", 220lbs, with stunt, <span class="bg-red-600">actual&nbsp;combat</span> and acting training galore, makes Roger Ivens a presence to be reckoned with as your door kicker in film.
 					</p>
@@ -79,7 +78,7 @@ import Slides from '../components/slides.vue';
 		//
 		display: grid;
 		gap: 0rem 2rem;
-		grid-template-columns: 3fr 4fr;
+		grid-template-columns: 2fr 4fr;
 		gap: .5rem 2rem;
 		grid-auto-rows: min-content min-content min-content auto;
 
@@ -116,6 +115,21 @@ import Slides from '../components/slides.vue';
 	.slideshow {
 		grid-area: slideshow;
     margin-bottom: auto;
+		max-height: 50vh;
+
+		img {
+			max-height: 90vh;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		.slideshow {
+			// grid-area: slideshow;
+			max-height: initial;
+			img {
+				max-height: initial;
+			}
+		}
 	}
 	.contact {
 		grid-area: contact;
