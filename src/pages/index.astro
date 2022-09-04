@@ -4,77 +4,130 @@ import Slides from '../components/slides.vue';
 ---
 
 <Layout title="Roger Ivens - Actor">
-	<!-- RED BAR -->
-	<div id="red-bar" class="bg-gradient-to-b from-red-900 to-red-900/0 mix-blend-overlay w-full h-[5.4rem] z-10 absolute top-0 left-0"></div>
 
-	<!-- CONTENT -->
-	<div class="w-screen h-screen relative z-20 overflow-auto pb-6">
-		<main class="max-w-screen-xl h-screen grid lg:grid-flow-col grid-flow-row gap-4 p-6 justify-center lg:w-[100%] m-auto pb-6">
-			<section id="hero-pic-area" class="mx-auto mb-auto">
+	<div class="w-screen h-screen z-20 overflow-auto">
+		<div class="grid w-full">
 
-				<!-- SLIDE SHOW HERE -->
-				<!-- SLIDE SHOW HERE -->
-				<!-- SLIDE SHOW HERE -->
+			<div class="name flex flex-row flex-wrap gap-x-4 w-full justify-center">
+				<img class="block max-h-[3rem]" src="./roger-head.svg" alt="Roger">
+				<img class="block max-h-[3rem]" src="./ivens-head.svg" alt="Ivens">
+			</div>
+
+			<div class="slideshow w-full">
+				<!-- <h1>hello</h1> -->
 				<Slides client:load />
-				<!-- <img class="aspect-auto max-h-[90vh] rounded-lg md:rounded-br-[60px] m-auto"
-					src="/roger-pic.jpg"
-					alt="Roger Ivens in Stranger S4 EP8"
-				> -->
+			</div>
 
-			</section>
-			<section id="content-area" class="">
-				<div class="flex flex-row flex-wrap gap-x-8 w-full justify-center">
-					<img class="max-h-[3.5rem]" src="./roger-head.svg" alt="Roger">
-					<img class="max-h-[3.5rem]" src="./ivens-head.svg" alt="Ivens">
+			<div class="contact">
+				<h3 class="text-md text-center text-shadow leading-[1.3] my-0">
+					Agency: Phirgun Mair
+				</h3>
+				<h5 class="text-md text-center text-shadow leading-[1.3] my-0">Agent: Peter Yanke,
+					<a href="tel:5754181037" class="hover:border-b-2">(575)&nbsp;418&#x2011;1037</a>,<br>
+					<a href="mailto:phirgunmair@gmail.com" class="hover:border-b-2">phirgunmair@gmail.com</a>
+				</h5>
+			</div>
+
+			<div class="links flex flex-row flex-wrap gap-x-2 justify-center content-center">
+				<div class="py-2">
+					<a class="btn" href="https://www.instagram.com/rogerivens_actor/" target="_blank">Instagram</a>
+					<a class="btn" href="https://resumes.actorsaccess.com/rogerivens" target="_blank">ActorsAccess</a>
 				</div>
-				<section id="contact" class="my-3">
-					<h3 class="text-l text-center text-shadow leading-[1.3] my-0">
-						Agency: Phirgun Mair
-					</h3>
-					<h5 class="text-l text-center text-shadow leading-[1.3] my-0">Agent: Peter Yanke,
-						<a href="tel:5754181037" class="hover:border-b-2">(575)&nbsp;418&#x2011;1037</a>,
-						<a href="mailto:phirgunmair@gmail.com" class="hover:border-b-2">phirgunmair@gmail.com</a>
-					</h5>
-				</section>
-				<section id="links" class="flex flex-row flex-wrap gap-x-3 flex-center justify-center mt-0 mb-3">
-					<a class="h-[36px] w-[36px]" href="https://www.instagram.com/rogerivens_actor/" target="_blank">
-						<img class="hover:drop-shadow-[2px_2px_2px_rgba(0,0,0,.5)]" src="/instagram_logo.svg" alt="Instagram">
-					</a>
-					<button class="rounded-br-xl bg-red-800 hover:bg-red-900 hover:drop-shadow-[2px_2px_2px_rgba(0,0,0,.5)] px-5 py-1 mb-2">
-						<a class="text-center text-white leading-[1] my-0" href="https://resumes.actorsaccess.com/rogerivens" target="_blank">ActorsAccess.com</a>
-					</button>
-					<button class="rounded-br-xl bg-red-800 hover:bg-red-900 hover:drop-shadow-[2px_2px_2px_rgba(0,0,0,.5)] px-5 py-1 mb-2"><a class="text-center text-white leading-[1] my-0" href="https://www.spotlight.com/7613-0165-6467" target="_blank">Spotlight.com</a></button>
-					<button class="rounded-br-xl bg-red-800 hover:bg-red-900 hover:drop-shadow-[2px_2px_2px_rgba(0,0,0,.5)] px-5 py-1 mb-2"><a class="text-center text-white leading-[1] my-0" href="https://www.imdb.com/name/nm10876025/" target="_blank">IMDb.com</a></button>
-				</section>
-				<section id="content" class="flex flex-col md:flex-row flex-wrap gap-4 scroll-auto">
+				<div class="py-2">
+					<a class="btn" href="https://www.spotlight.com/7613-0165-6467" target="_blank">Spotlight</a>
+					<a class="btn" href="https://www.imdb.com/name/nm10876025/" target="_blank">IMDb</a>
+				</div>
+			</div>
 
-					<article class="min-w-[300px] flex-1 bg-black/40 p-6 rounded-br-[60px] w-full">
-						<p class="text-white text-shadow"><img class="float-left h-[2.65rem]" src="/cap-R.svg">oger Ivens is a rising star in the action genre, known as the 'Helicopter Sniper' in <span class="bg-red-600">Stranger&nbsp;Things</span> S4 EP8, with recent supporting roles in Lonesome Soldier, VR and as SWAT commander in Sacrifice, and currently working on blockbusters with release dates in the Summer and Fall of 2023.
-							<br>
-							A killer in film, a lover of life with an international background, while standing at 6'2", 220lbs, with stunt, <span class="bg-red-600">actual&nbsp;combat</span> and acting training galore, makes Roger Ivens a presence to be reckoned with as your door kicker in film.
-						</p>
-						<aside id="bio" class="shrink bg-gradient-to-b from-red-900 to-red-900/30 p-4 mt-2 rounded-br-[30px]">
-							<div class="flex flex-row flex-wrap gap-x-3 gap-y-1 content-center items-baseline">
-								<img src="/bio.svg" alt="bio" class="h-[1.25rem] mr-4 ">
-								<span class="text-sm">Hair: Brown</span>
-								<span class="text-sm">Eyes: Brown</span>
-								<span class="text-sm">Height: 6&prime;2&Prime;</span>
-								<span class="text-sm">Weight: 220lb</span>
-								<span class="text-sm">Chest: 42&Prime;</span>
-								<span class="text-sm">Waist: 32&Prime;</span>
-								<span class="text-sm">Shoe: 12</span>
-							</div>
-						</aside>
-					</article>
-				</section>
-			</section>
-		</main>
+			<div class="content">
+				<article class="flex-1 bg-black/40 p-6 w-full rounded-2xl rounded-tl-none mb-4">
+					<p class="text-sm text-white text-shadow"><img class="float-left h-[2.65rem]" src="/cap-R.svg">oger Ivens is a rising star in the action genre, known as the 'Helicopter Sniper' in <span class="bg-red-600">Stranger&nbsp;Things</span> S4 EP8, with recent supporting roles in Lonesome Soldier, VR and as SWAT commander in Sacrifice, and currently working on blockbusters with release dates in the Summer and Fall of 2023.
+						<br>
+						A killer in film, a lover of life with an international background, while standing at 6'2", 220lbs, with stunt, <span class="bg-red-600">actual&nbsp;combat</span> and acting training galore, makes Roger Ivens a presence to be reckoned with as your door kicker in film.
+					</p>
+					<aside id="bio" class="shrink flex flex-row gap-x-3 content-center items-baseline bg-gradient-to-b from-red-900 to-red-900/30 p-4 mt-2 rounded-xl">
+						<img src="/bio.svg" alt="bio" class="h-[1.25rem] m-auto">
+						<div class="m-auto content-center leading-none ">
+							<span class="text-xs leading-1">Hair: Brown</span>
+							<span class="text-xs leading-1">Eyes: Brown</span>
+							<span class="text-xs leading-1">Height: 6&prime;2&Prime;</span>
+							<span class="text-xs leading-1">Weight: 220lb</span>
+							<span class="text-xs leading-1">Chest: 42&Prime;</span>
+							<span class="text-xs leading-1">Waist: 32&Prime;</span>
+							<span class="text-xs leading-1">Shoe: 12</span>
+						</div>
+					</aside>
+				</article>
+			</div>
+
+		</div>
 	</div>
 
-	<!-- RED BAR -->
-	<div id="red-bar" class="bg-gradient-to-t from-red-900 to-red-900/0 mix-blend-overlay w-full h-20 z-10 fixed bottom-0"></div>
 </Layout>
 
-<style>
+<style lang="scss">
+
+	.btn {
+		@apply text-xs rounded-full border border-transparent hover:border  bg-slate-900/80 hover:bg-slate-900 hover:drop-shadow-[0px_4px_0px_rgba(0,0,0,.3)] px-4 py-2 text-center text-[#eed5a0] leading-[1] tracking-wide;
+	}
+
+	.grid {
+		width: 100%;
+		// height: 100%;
+		padding: 2rem 2.5rem;
+		margin: 0 auto;
+		//
+		display: grid;
+		gap: 0rem 2rem;
+		grid-template-columns: 3fr 4fr;
+		gap: .5rem 2rem;
+		grid-auto-rows: min-content min-content min-content auto;
+
+		grid-template-areas: "slideshow name"
+                         "slideshow contact"
+                         "slideshow links"
+                         "slideshow contentDiv"
+												 ". ."
+												 ;
+		@media screen and (max-width: 800px) {
+			grid-template-columns: 1fr;
+			gap: .5rem 2rem;
+			grid-auto-rows: initial;
+
+			grid-template-areas: "name"
+												   "slideshow"
+													 "contact"
+													 "links"
+													 "contentDiv";
+		}
+
+	}
+	.name
+	.slideshow
+	.contact
+	.links
+	.contentDiv {
+		//
+	}
+	.name {
+		grid-area: name;
+    margin: auto;
+	}
+	.slideshow {
+		grid-area: slideshow;
+    margin-bottom: auto;
+	}
+	.contact {
+		grid-area: contact;
+    margin: auto;
+	}
+	.links {
+		grid-area: links;
+    margin: auto;
+	}
+	.contentDiv {
+		grid-area: contentDiv;
+    margin: auto;
+	}
 
 </style>

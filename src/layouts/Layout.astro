@@ -35,7 +35,9 @@ const { title } = Astro.props as Props;
 
 	</head>
 	<body class="m-0 p-0 relative w-screen h-screen overflow-auto">
+		<div class="red-bar left-0 top-0"></div>
 		<slot />
+		<div class="red-bar left-0 bottom-0 rotate-180"></div>
 	</body>
 </html>
 
@@ -62,6 +64,10 @@ const { title } = Astro.props as Props;
 	}
 
 	$red: rgb(148, 0, 0);
+
+	.red-bar {
+		@apply bg-gradient-to-b from-red-900 to-red-900/0 mix-blend-overlay w-screen h-[5.4rem] z-10 absolute ;
+	}
 
 	:global(h1) {
 		font-size: var(--font-size-xl);
@@ -110,7 +116,6 @@ const { title } = Astro.props as Props;
 	:global(details::-webkit-scrollbar) {
 		height: .5rem;
 		width: .5rem;
-
 	}
 
 </style>
