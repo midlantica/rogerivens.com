@@ -1,8 +1,6 @@
 <script setup>
   // import { ref } from "vue";
   import { VueperSlides, VueperSlide } from "vueperslides";
-
-
   import "../../node_modules/vueperslides/dist/vueperslides.css";
 
   const slides = [
