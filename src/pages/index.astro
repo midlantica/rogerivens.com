@@ -5,31 +5,19 @@ import Slides from '../components/slides3.vue';
 
 <Layout title="Roger Ivens - Actor">
 
-	<div class="w-screen h-screen z-20 overflow-auto">
-		<div class="grid w-full">
+	<div class="w-screen h-screen z-50 overflow-auto relative">
+		<div class="grid w-full relative z-50">
 
 			<div class="name flex flex-row flex-wrap gap-x-4 w-full justify-center ">
 				<img class="block max-h-[5vh] sm:max-h-[7vh]" src="./roger-head.svg" alt="Roger">
 				<img class="block max-h-[5vh] sm:max-h-[7vh]" src="./ivens-head.svg" alt="Ivens">
 			</div>
 
-			<div class="slideshow">
+			<div class="slideshow flex justify-center">
 				<Slides client:load class="z-20 m-auto" />
 			</div>
 
-			<div class="strangerThings">
-				<a href="https://www.youtube.com/watch?v=CROD3BxXS9Y&t=44s&ab_channel=jeffreyleerobinson" target="_blank">
-					<div class="bg-white/20 hover:bg-black/30 py-2 px-4 rounded-2xl rounded-tl-none flex items-center">
-						<p class="text-md text-black hover:text-white mt-2 text-right font-medium">
-							Roger Ivens in Stranger Things S4 EP8 as Helicopter Sniper "Hold her steady!"
-						</p>
-						<img class="ml-4 aspect-auto w-[10rem] h-[6rem]" src="/Roger-clip-01.gif" alt="Roger Ivens in Stranger Things">
-						<!-- <br class="h-0 clear-both"> -->
-					</div>
-				</a>
-			</div>
-
-			<div class="contact py-2">
+			<div class="contact pt-2">
 				<h3 class="text-md text-center text-shadow leading-[1.3]">
 					Agency: Phirgun Mair
 				</h3>
@@ -37,6 +25,29 @@ import Slides from '../components/slides3.vue';
 					<a href="tel:5754181037" class="hover:border-b-2">(575)&nbsp;418&#x2011;1037</a>,<br>
 					<a href="mailto:phirgunmair@gmail.com" class="hover:border-b-2">phirgunmair@gmail.com</a>
 				</h5>
+			</div>
+
+			<div class="strangerThings videoBlock">
+				<a href="https://www.youtube.com/watch?v=CROD3BxXS9Y&t=44s&ab_channel=jeffreyleerobinson" target="_blank">
+					<div class="bg-white/30 hover:bg-black/50 hover:text-white p-3 rounded-2xl rounded-tl-none flex items-start">
+						<p class="text-md text-black hover:text-white mt-2 text-right font-medium">
+							Roger Ivens in Stranger Things S4 EP8 as Helicopter Sniper "Where you think you're going doc?"
+						</p>
+						<img class="ml-4 aspect-auto w-[10rem] h-[6rem] rounded-lg" src="/Roger-clip-01.gif" alt="Roger Ivens in Stranger Things">
+						<!-- <br class="h-0 clear-both"> -->
+					</div>
+				</a>
+			</div>
+
+			<div class="horseVid videoBlock">
+				<a href="https://youtu.be/47vnwhvKuHg" target="_blank">
+					<div class="bg-white/30 hover:bg-black/50 hover:text-white p-3 rounded-2xl rounded-tl-none flex items-start">
+						<img class="mr-4 aspect-auto w-[10rem] h-[6rem] rounded-lg" src="/horse-video.gif" alt="Roger Ivens in Stranger Things">
+						<p class="text-md text-black hover:text-white mt-2 text-left font-medium">
+							When not killing scientists with an 80's era sniper rifle, you can find Roger Ivens honing his Mongolian Mounted archery skills in the New Mexican hinterlands.
+						</p>
+					</div>
+				</a>
 			</div>
 
 			<div class="links flex flex-row flex-wrap gap-x-2 justify-center content-center">
@@ -51,7 +62,7 @@ import Slides from '../components/slides3.vue';
 			</div>
 
 			<div class="content">
-				<article class="flex-1 bg-black/40 p-6 w-full rounded-2xl rounded-tl-none mb-4">
+				<article class="flex-1 bg-black/40 p-6 w-full rounded-2xl rounded-tl-none">
 					<p class="text-sm text-white text-shadow"><img class="float-left h-[2.3rem] mr-1" src="/cap-R.svg">oger Ivens is a rising star in the action genre, known as the 'Helicopter Sniper' in <span class="bg-red-600">Stranger&nbsp;Things</span> S4 EP8, with recent supporting roles in Lonesome Soldier, VR and as SWAT commander in Sacrifice, and currently working on blockbusters with release dates in the Summer and Fall of 2023.
 						<br>
 						A killer in film, a lover of life with an international background, while standing at 6'2", 220lbs, with stunt, <span class="bg-red-600">actual&nbsp;combat</span> and acting training galore, makes Roger Ivens a presence to be reckoned with as your door kicker in film.
@@ -69,6 +80,27 @@ import Slides from '../components/slides3.vue';
 						</div>
 					</aside>
 				</article>
+			</div>
+
+			<div class="extras w-full flex flex-wrap gap-2">
+
+				<div class="videoBlock flex-1">
+					<a class="" href="https://youtu.be/CROD3BxXS9Y" target="_blank">
+						<div class=" bg-white/20 hover:bg-black/30 hover:text-white p-3 rounded-2xl rounded-tl-none flex flex-1 flex-wrap gap-2 items-center justify-center">
+							<img class="shrink inline-block min-h-[3rem] w-[10rem] h-[6rem] rounded-lg" src="/acting-reel-sm.png" alt="Roger Ivens in Stranger Things">
+							<p class="shrink text-sm text-center leading-tight text-black hover:text-white text-left font-medium">Roger Ivens Acting Reel 2022</p>
+						</div>
+					</a>
+				</div>
+
+				<div class="videoBlock flex-1">
+					<a class="" href="https://youtu.be/LryOqL_QJbQ" target="_blank">
+						<div class=" bg-white/20 hover:bg-black/30 hover:text-white p-3 rounded-2xl rounded-tl-none flex flex-1 flex-wrap gap-2 items-center justify-center">
+							<img class="shrink inline-block gap-3 min-h-[3rem] w-[10rem] h-[6rem] rounded-lg" src="/PretendWorld-pic.png" alt="Roger Ivens in Stranger Things">
+							<p class="shrink text-sm text-center leading-tight text-black hover:text-white text-left font-medium">Pretend World's Real People</p>
+						</div>
+					</a>
+				</div>
 			</div>
 
 		</div>
@@ -96,23 +128,28 @@ import Slides from '../components/slides3.vue';
 
 		grid-template-areas: "slideshow name"
                          "slideshow contact"
-                         "slideshow strangerThings"
                          "slideshow links"
+                         "slideshow strangerThings"
+                         "slideshow horseVid"
                          "slideshow contentDiv"
-												 ". ."
+                         "slideshow extras"
 												 ;
 		@media screen and (max-width: 800px) {
 			padding: 1rem 1.25rem;
 			grid-template-columns: 1fr;
 			gap: .5rem 2rem;
 			grid-auto-rows: initial;
-
+			justify-items: center;
+			//
 			grid-template-areas: "name"
 												   "slideshow"
 													 "contact"
-													 "strangerThings"
 													 "links"
-													 "contentDiv";
+													 "strangerThings"
+													 "horseVid"
+													 "contentDiv"
+													 "extras"
+													 ;
 		}
 
 	}
@@ -159,6 +196,44 @@ import Slides from '../components/slides3.vue';
 	.contentDiv {
 		grid-area: contentDiv;
     margin: auto;
+	}
+	.horseVid {
+		grid-area: horseVid;
+    margin: auto;
+	}
+	.extras {
+		grid-area: extras;
+    margin: auto;
+	}
+	.ActingReel {
+		grid-area: ActingReel;
+    margin: auto;
+	}
+	.PretendWorld {
+		grid-area: PretendWorld;
+    margin: auto;
+	}
+
+	.strangerThings {
+		grid-area: strangerThings;
+	}
+	.videoBlock {
+		// width: 45%;
+		div {
+
+		}
+		div:hover {
+			//
+
+			p {
+				color: white;
+			}
+
+			img {
+				border: 2px solid white;
+			}
+		}
+
 	}
 
 </style>
