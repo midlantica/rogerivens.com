@@ -5,7 +5,8 @@
     resizeOnContentsReady: true,
     useFractionalSize: true,
     autoplay: true,
-    duration: 1000
+    duration: 1000,
+    fade: true,
     }" :plugins="plugins" @move-end="onMoveEnd"
   >
     <div class="slideWrap">
@@ -40,7 +41,7 @@
   import "@egjs/flicking-plugins/dist/arrow.css";
   import { AutoPlay } from "@egjs/flicking-plugins";
 
-  const plugins = [new Arrow(), new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: true })];
+  const plugins = [new Arrow(), new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: true, fade: true })];
 
 </script>
 
@@ -49,9 +50,10 @@
     width: 100%;
     // max-height: 75vh;
     // z-index: 25;
+    // margin: auto;
 
     @media screen and (max-width: 800px) {
-      max-height: 600px;
+      // max-height: 600px;
     }
 
     img {
@@ -69,5 +71,8 @@
     height: 6px;
     position: absolute;
     width: 24px;
+}
+.flicking-camera {
+  // justify-content: center !important;
 }
 </style>
