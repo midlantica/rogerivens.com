@@ -9,5 +9,10 @@ export default defineConfig({
     tailwind(),
     mdx(),
     vue()
-  ]
+  ],
+  vite: {
+    ssr: {
+      noExternal: ['vueperslides']
+    }
+  }
 });
