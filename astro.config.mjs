@@ -10,9 +10,9 @@ export default defineConfig({
     mdx(),
     vue()
   ],
-  vite: {
-    ssr: {
-      noExternal: ['vueperslides']
-    }
-  }
+  // vite: {
+  //   ssr: {
+  //     noExternal: ['vueperslides']
+  //   }
+  // }
 });

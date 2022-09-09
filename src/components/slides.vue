@@ -12,18 +12,16 @@
     {
       // title: 'Slide #1',
       // content: 'Slide content.',
-      image: "roger_ivens_reel_still_02.jpeg",
-      // video: {
-      //   video: {
-      //     mp4: `/roger_ivens_acting_reel_2022.mp4`,
-      //     props: {
-      //       autoplay: true,
-      //       loop: false,
-      //       controls: true,
-      //       muted: false
-      //     }
-      //   }
-      // }
+      // image: "roger_ivens_reel_still_02.jpeg",
+      video: {
+        mp4: `/roger_ivens_acting_reel_2022.mp4`,
+        props: {
+          autoplay: true,
+          loop: false,
+          controls: true,
+          muted: false
+        }
+      }
     },
     {
       // title: 'Slide #2',
