@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import RogerIvens from '../components/rogerIvens.astro';
 import Slides from '../components/slides3.vue';
 ---
 
@@ -8,10 +9,7 @@ import Slides from '../components/slides3.vue';
 	<div class="w-screen h-screen z-50 overflow-auto relative">
 		<div class="grid w-full relative z-50">
 
-			<div class="name flex flex-row flex-wrap gap-x-4 w-full justify-center ">
-				<img class="block max-h-[5vh] sm:max-h-[7vh]" src="./roger-head.svg" alt="Roger">
-				<img class="block max-h-[5vh] sm:max-h-[7vh]" src="./ivens-head.svg" alt="Ivens">
-			</div>
+			<RogerIvens />
 
 			<div class="slideshow flex justify-center">
 				<Slides client:load class="z-20 m-auto" />
