@@ -7,7 +7,7 @@
     autoplay: true,
     duration: 1000,
     fade: true,
-    }" :plugins="plugins" @move-end="onMoveEnd"
+    }" :plugins="plugins"
   >
     <div class="slideWrap">
       <img src="/roger-pic-01.jpg" alt="">
