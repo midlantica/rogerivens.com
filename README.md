@@ -1,13 +1,5 @@
 # Welcome to [Astro](https://astro.build)
 
-# Hello me
-
-## subhead
-
-### sub sub head
-
-uy ky iuy jhg khjg khjg khjg kjhg hjkg hjkg
-
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
 
 
