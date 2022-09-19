@@ -2,6 +2,9 @@
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
 
+<img width="404" alt="image" src="https://user-images.githubusercontent.com/1449595/190935012-ff03a996-55da-4640-b4fb-3d0861f808b1.png">
+
+
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
 ## 🚀 Project Structure
