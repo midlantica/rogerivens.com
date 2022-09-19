@@ -2,7 +2,7 @@
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
 
-<img width="404" alt="image" src="https://user-images.githubusercontent.com/1449595/190935012-ff03a996-55da-4640-b4fb-3d0861f808b1.png">
+![5CAEA859-1A2A-4BF8-BECE-D6E0E62FD160_1_105_c](https://user-images.githubusercontent.com/1449595/190935052-ef6b7113-1824-4bff-9934-2e98f972c5c2.jpeg)
 
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
