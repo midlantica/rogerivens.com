@@ -37,9 +37,14 @@
 <script setup>
   import Flicking from "@egjs/vue3-flicking";
   import "@egjs/flicking/dist/flicking.css";
-  import { Arrow } from "@egjs/flicking-plugins";
+  import * as FlickingPluginsNS from "@egjs/flicking-plugins";
   import "@egjs/flicking-plugins/dist/arrow.css";
-  import { AutoPlay } from "@egjs/flicking-plugins";
+
+  const { Arrow, AutoPlay } = FlickingPluginsNS.default ?? FlickingPluginsNS;
+
+
+
+
 
   const plugins = [new Arrow(), new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: true, fade: true })];
 

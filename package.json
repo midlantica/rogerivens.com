@@ -11,18 +11,21 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^2.2.2",
-    "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/vue": "^4.0.9",
-    "astro": "^4.5.10",
-    "sass": "^1.54.5",
-    "vue": "^3.2.37"
+    "@astrojs/mdx": "^7.0.3",
+    "@astrojs/vue": "^7.0.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.1.1",
+    "sass": "^1.101.0",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.1.5",
+    "vue": "^3.5.40"
   },
   "dependencies": {
-    "@egjs/flicking-plugins": "^4.4.0",
-    "@egjs/vue3-flicking": "^4.9.3",
-    "autoprefixer": "^10.4.8",
-    "cssnano": "^5.1.13",
-    "vueperslides": "^3.4.2"
+    "@egjs/flicking-plugins": "^4.8.1",
+    "@egjs/vue3-flicking": "^4.16.3",
+    "vueperslides": "^3.6.0"
+  },
+  "overrides": {
+    "vite": "$vite"
   }
 }
