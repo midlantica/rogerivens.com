@@ -1,162 +1,166 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import RogerIvens from '../components/rogerIvens.astro';
-import Contact from '../components/contact.astro';
-import PanelStrangerThings from '../components/panelStrangerThings.astro';
-import PanelHorseVid from '../components/panelHorseVid.astro';
-import Links from '../components/links.astro';
-import Content from '../components/content.astro';
-import PanelActingReel from '../components/panelActingReel.astro';
-import PanelPretendWorld from '../components/panelPretendWorld.astro';
-import Slides from '../components/slides3.vue';
+import Layout from "../layouts/Layout.astro"
+import RogerIvens from "../components/rogerIvens.astro"
+import Contact from "../components/contact.astro"
+import Links from "../components/links.astro"
+import Content from "../components/content.astro"
+import VideoPanel from "../components/VideoPanel.astro"
+import Slides from "../components/slides3.vue"
 ---
 
-<Layout title="Roger Ivens - Actor">
+<Layout title='Roger Ivens - Actor'>
+  <div class='w-screen h-screen z-50 2xl:max-w-6xl 2xl:m-auto overflow-auto relative'>
+    <div class='grid w-full relative z-50'>
+      <RogerIvens class='name' />
 
-	<div class="w-screen h-screen z-50 2xl:max-w-6xl 2xl:m-auto overflow-auto relative">
-		<div class="grid w-full relative z-50">
+      <div class='slideshow'>
+        <Slides client:load class='z-20 m-auto' />
+      </div>
 
-			<RogerIvens class="name" />
+      <Contact class='contact' />
 
-			<div class="slideshow">
-				<Slides client:load class="z-20 m-auto" />
-			</div>
+      <Links class='links' />
 
-			<Contact class="contact" />
+      <VideoPanel
+        class='strangerThings'
+        href='https://www.youtube.com/watch?v=CROD3BxXS9Y&t=44s&ab_channel=jeffreyleerobinson'
+        image='/Roger-clip-01.gif'
+        caption={`Roger Ivens in Stranger Things S4 EP8 as Helicopter Sniper "Where you think you're going Doc?"`}
+        reverse
+      />
 
-			<Links class="links" />
+      <VideoPanel
+        class='horseVid'
+        href='https://youtu.be/47vnwhvKuHg'
+        image='/horse-video.gif'
+        caption="When not killing poor scientists with an 80's era sniper rifle, you can find Roger Ivens honing his Mongolian Mounted archery skills in the New Mexican hinterlands."
+      />
 
-			<PanelStrangerThings class="strangerThings" />
+      <Content class='content' />
 
-			<PanelHorseVid class="horseVid" />
+      <div class='extras w-full flex flex-wrap gap-2'>
+        <VideoPanel
+          variant='reel'
+          href='https://youtu.be/CROD3BxXS9Y'
+          image='/acting-reel-sm.png'
+          caption='Roger Ivens Acting Reel 2022'
+        />
 
-			<Content class="content" />
-
-			<div class="extras w-full flex flex-wrap gap-2">
-
-				<PanelActingReel />
-
-				<PanelPretendWorld />
-
-			</div>
-
-		</div>
-	</div>
-
+        <VideoPanel
+          variant='reel'
+          href='https://youtu.be/LryOqL_QJbQ'
+          image='/PretendWorld-pic.png'
+          caption="Pretend World's Real People"
+        />
+      </div>
+    </div>
+  </div>
 </Layout>
 
-<style lang="scss" is:global>
-	.grid {
-		width: 100%;
-		// height: 100%;
-		padding: 2rem 2.5rem;
-		margin: 0 auto;
-		//
-		display: grid;
-		gap: 0rem 2rem;
-		grid-template-columns: 2fr 4fr;
-		gap: .5rem 2rem;
-		grid-auto-rows: min-content min-content min-content auto;
+<style lang='scss' is:global>
+  .grid {
+    width: 100%;
+    // height: 100%;
+    padding: 2rem 2.5rem;
+    margin: 0 auto;
+    //
+    display: grid;
+    gap: 0rem 2rem;
+    grid-template-columns: 2fr 4fr;
+    gap: 0.5rem 2rem;
+    grid-auto-rows: min-content min-content min-content auto;
 
-		grid-template-areas: "slideshow name"
-                         "slideshow contact"
-                         "slideshow links"
-                         "slideshow strangerThings"
-                         "slideshow horseVid"
-                         "slideshow contentDiv"
-                         "slideshow extras"
-												 ;
-		@media screen and (max-width: 800px) {
-			padding: 1rem 1.25rem;
-			grid-template-columns: 1fr;
-			gap: .5rem 2rem;
-			grid-auto-rows: initial;
-			justify-items: center;
-			//
-			grid-template-areas: "name"
-												   "slideshow"
-													 "contact"
-													 "links"
-													 "strangerThings"
-													 "horseVid"
-													 "contentDiv"
-													 "extras"
-													 ;
-		}
-
-	}
-	.name
-	.slideshow
-	.contact
-	.links
-	.contentDiv {
-		//
-	}
-	.name {
-		grid-area: name;
+    grid-template-areas:
+      "slideshow name"
+      "slideshow contact"
+      "slideshow links"
+      "slideshow strangerThings"
+      "slideshow horseVid"
+      "slideshow contentDiv"
+      "slideshow extras";
+    @media screen and (max-width: 800px) {
+      padding: 1rem 1.25rem;
+      grid-template-columns: 1fr;
+      gap: 0.5rem 2rem;
+      grid-auto-rows: initial;
+      justify-items: center;
+      //
+      grid-template-areas:
+        "name"
+        "slideshow"
+        "contact"
+        "links"
+        "strangerThings"
+        "horseVid"
+        "contentDiv"
+        "extras";
+    }
+  }
+  .name .slideshow .contact .links .contentDiv {
+    //
+  }
+  .name {
+    grid-area: name;
     margin: auto;
-	}
-	.slideshow {
-		grid-area: slideshow;
+  }
+  .slideshow {
+    grid-area: slideshow;
     margin-bottom: auto;
-		max-height: 50vh;
+    max-height: 50vh;
 
-		img {
-			max-height: 90vh;
-		}
-	}
+    img {
+      max-height: 90vh;
+    }
+  }
 
-	@media screen and (max-width: 800px) {
-		.slideshow {
-			max-height: 100%;
-			max-width: 520px;
-			img {
-				max-height: initial;
-			}
-		}
-	}
-	.contact {
-		grid-area: contact;
-	}
-	.links {
-		grid-area: links;
-	}
-	.contentDiv {
-		grid-area: contentDiv;
-	}
-	.horseVid {
-		grid-area: horseVid;
-	}
-	.extras {
-		grid-area: extras;
-	}
-	.ActingReel {
-		grid-area: ActingReel;
-	}
-	.PretendWorld {
-		grid-area: PretendWorld;
-	}
+  @media screen and (max-width: 800px) {
+    .slideshow {
+      max-height: 100%;
+      max-width: 520px;
+      img {
+        max-height: initial;
+      }
+    }
+  }
+  .contact {
+    grid-area: contact;
+  }
+  .links {
+    grid-area: links;
+  }
+  .contentDiv {
+    grid-area: contentDiv;
+  }
+  .horseVid {
+    grid-area: horseVid;
+  }
+  .extras {
+    grid-area: extras;
+  }
+  .ActingReel {
+    grid-area: ActingReel;
+  }
+  .PretendWorld {
+    grid-area: PretendWorld;
+  }
 
-	.strangerThings {
-		grid-area: strangerThings;
-	}
-	.videoBlock {
-		//
-		div {
+  .strangerThings {
+    grid-area: strangerThings;
+  }
+  .videoBlock {
+    //
+    div {
+    }
+    div:hover {
+      //
 
-		}
-		div:hover {
-			//
+      p {
+        color: white;
+      }
 
-			p {
-				color: white;
-			}
-
-			img {
-				border: 2px solid white;
-			}
-		}
-
-	}
-
+      img {
+        border: 2px solid white;
+      }
+    }
+  }
 </style>

@@ -1,0 +1,64 @@
+---
+export interface Props {
+  href: string
+  image: string
+  alt?: string
+  caption: string
+  /** "reel" = centered thumbnail w/ small caption below (used in the "extras" row)
+   *  "wide" = larger side-by-side image + caption block */
+  variant?: "reel" | "wide"
+  /** For "wide" variant only: puts the image on the right and the caption on the left */
+  reverse?: boolean
+  class?: string
+}
+
+const {
+  href,
+  image,
+  alt = "Roger Ivens",
+  caption,
+  variant = "wide",
+  reverse = false,
+  class: className = "",
+} = Astro.props
+---
+
+<div class:list={["videoBlock", variant === "reel" && "flex-1", className]}>
+  <a href={href} target='_blank'>
+    {
+      variant === "reel" ? (
+        <div class='bg-white/20 hover:bg-black/30 hover:text-white p-3 rounded-2xl rounded-tl-none flex flex-1 flex-wrap gap-2 items-center justify-center'>
+          <img
+            class='shrink inline-block min-h-[3rem] w-[10rem] h-[6rem] rounded-lg'
+            src={image}
+            alt={alt}
+          />
+          <p class='shrink text-sm text-center leading-tight text-black hover:text-white text-left font-medium'>
+            {caption}
+          </p>
+        </div>
+      ) : (
+        <div
+          class:list={[
+            "bg-white/30 hover:bg-black/50 hover:text-white p-3 rounded-2xl rounded-tl-none flex items-start",
+            reverse && "flex-row-reverse",
+          ]}
+        >
+          <img
+            class:list={["aspect-auto w-[10rem] h-[6rem] rounded-lg", reverse ? "ml-4" : "mr-4"]}
+            src={image}
+            alt={alt}
+          />
+          <p
+            class:list={[
+              "text-md text-black hover:text-white mt-2 font-medium",
+              reverse ? "text-right" : "text-left",
+            ]}
+          >
+            {caption}
+          </p>
+        </div>
+      )
+    }
+  </a>
+</div>
